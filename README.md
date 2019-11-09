@@ -7,6 +7,8 @@
 ### Association
 - has_many :massages
 - has_many :groups, through: :group_users
+- has_many :groups_users
+
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -27,6 +29,7 @@
 ### Association
 - has_many :massages
 - has_many :users, through: :group_users
+- has_many :groups_users
 
 ## groups_users テーブル
 |Column|Type|Options|
