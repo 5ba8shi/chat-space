@@ -12,7 +12,7 @@
 |------|----|-------|
 |body|text||
 |image|string||
-|group_id|integer|null: false, foreign_key: true|
+|group_id|integer|
 |user_id|integer|
 ### Association
 - belongs_to :user
