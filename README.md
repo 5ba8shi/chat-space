@@ -23,9 +23,8 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
 |name|string|null: false|
-|member|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :massages
 - has_many :users, through: :group_users
