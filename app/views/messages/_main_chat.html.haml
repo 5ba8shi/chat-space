@@ -1,0 +1,22 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group{"data-group_id" => "5037"}
+        おはよう
+      %ul.main-header__left-box__member-list
+        Member：
+        %li.main-header__left-box__member-list__member koko
+        %li.main-header__left-box__member-list__member pooooooo
+    %a{:href => "/groups/5037/edit"}
+      .main-header__edit-btn Edit
+  .messages
+  .form
+    %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/5037/messages", :enctype => "multipart/form-data", :method => "post"}
+      %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+      %input{:name => "authenticity_token", :type => "hidden", :value => "YA9wmlQW0V5uYgszLdwem19GxyBffLQU1m+N/9S36oebqvMr7gXcPXbFcvb+s3MUzFJ9n2aZoybc9ba7LI0LJg=="}/
+      .input-box
+        %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        %label.input-box__image{:for => "message_image"}
+          %i.fa.fa-image
+          %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
