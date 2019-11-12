@@ -5,11 +5,16 @@
         おはよう
       %ul.main-header__left-box__member-list
         Member：
-        %li.main-header__left-box__member-list__member koko
-        %li.main-header__left-box__member-list__member pooooooo
+        %li.main-header__left-box__member-list__member koba
     %a{:href => "/groups/5037/edit"}
       .main-header__edit-btn Edit
   .messages
+    .message{"data-message_id" => "12184"}
+      .message__upper-info
+        %p.message__upper-info__talker koba
+        %p.message__upper-info__date 2019/11/12(Tue) 19:00:43
+      %p.message__text this is a first massage
+
   .form
     %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/5037/messages", :enctype => "multipart/form-data", :method => "post"}
       %input{:name => "utf8", :type => "hidden", :value => "✓"}/
