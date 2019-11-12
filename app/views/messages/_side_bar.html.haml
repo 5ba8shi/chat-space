@@ -5,17 +5,17 @@
       %p.side-header__box__user-name koba
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          %a{:href => "#"}
+          = link_to "#"
             %i.fa.fa-edit
         %li.side-header__box__menu__edit-user
-          %a{:href => "#"}
+          = link_to "#"
             %i.fa.fa-cog
   .groups
-    %a{:href => "#"}
+    = link_to "#"
       .group
         %p.group__group-name     test
         %p.group__latest-message  まだメッセージはありません
-    %a{:href => "#"}
+    = link_to "#"
       .group
         %p.group__group-name     test2
         %p.group__latest-message  まだメッセージはありません
