@@ -2,10 +2,15 @@
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 @import "modules/user";
-@import "./_side_bar";
-@import "./_main_chat";
 @import "config/colors";
 @import "modules/flash";
+@import "modules/group";
+@import "config/size";
+@import "mixins/mixin";
+@import "mixins/vendor_prefix";
+@import "messages/messages";
+@import "./_side_bar";
+@import "./_main_chat";
 .wrapper {
   display: flex;
 }
