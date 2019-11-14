@@ -4,6 +4,8 @@
 @import "modules/user";
 @import "./_side_bar";
 @import "./_main_chat";
+@import "config/colors";
+@import "modules/flash";
 .wrapper {
   display: flex;
 }
