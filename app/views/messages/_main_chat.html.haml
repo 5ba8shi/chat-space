@@ -12,11 +12,6 @@
       .main-header__edit-btn Edit
   .messages
     = render @messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker koba
-        %p.message__upper-info__date 2019/11/12(Tue) 19:00:43
-      %p.message__text this is a first massage
 
   .form
     %form#new_message.new_message{action: "/groups/5037/messages", enctype: "multipart/form-data", method: "post"}
