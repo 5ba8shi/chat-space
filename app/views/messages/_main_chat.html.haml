@@ -1,14 +1,14 @@
 .chat
   .header
     .left-header 
-      = @group.name
       .left-header__title
-        Member：
+        = @group.name
       .left-header__members
+        Member：
         - @group.users.each do |user|
           = user.name
-      = link_to edit_group_path(current_user) do
-        .right-header Edit
+    = link_to edit_group_path(current_user) do
+      .right-header Edit
   .messages 
     = render @messages
 

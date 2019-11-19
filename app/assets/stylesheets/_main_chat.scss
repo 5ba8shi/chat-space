@@ -72,7 +72,8 @@
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 150px);
+      width: calc(99% - 150px);
+      padding-left: 10px;
     }
     &__mask {
       background-color: $white;
