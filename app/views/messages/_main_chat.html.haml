@@ -2,14 +2,14 @@
   .header
     .left-header 
       = @group.name
-        .left-header__title
-          Member：
-        .left-header__members
-          - @group.users.each do |user|
-            = user.name
+      .left-header__title
+        Member：
+      .left-header__members
+        - @group.users.each do |user|
+          = user.name
       = link_to edit_group_path(current_user) do
         .right-header Edit
-  .messages
+  .messages 
     = render @messages
 
   .form
