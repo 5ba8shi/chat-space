@@ -20,7 +20,7 @@ $(function(){
           ${image}
         </div>
       </div> `
- }
+  }
 $('#new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
