@@ -1,6 +1,6 @@
 $(function(){ 
   function buildHTML(message){
-    image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
+    image = ( message.image.url ) ? `<img class= "lower-message__image" src=${message.image.url} >` : "";
     let html = 
       `<div class="message" data-message-id=${message.id}>
         <div class="upper-message">
@@ -48,19 +48,22 @@ $(function(){
   var reloadMessages = function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var last_message_id = $('.message:last').data("message-id"); 
+      console.log(last_message_id)
       $.ajax({
         url: "api/messages",
         type: "get",
         dataType: 'json',
-        data: { last_id: last_message_id }
+        data: { id: last_message_id }
       })
+
+      console.log(data)
       .done(function(data){
         var insertHTML = '';
         data.forEach(function(message){
-          insertHTML = buildHTML(message);         
-          $('.message').append(insertHTML)
           if (last_message_id < message.id){
-            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+          insertHTML = buildHTML(message);         
+          $('.messages').append(insertHTML)
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
           }
         });
       })
