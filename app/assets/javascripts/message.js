@@ -60,7 +60,7 @@ $(function(){
         insertHTML = buildHTML(message);         
         $('.main__message').append(insertHTML)
         if (last_message_id < message.id){
-          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');;
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         }
       });
     })
