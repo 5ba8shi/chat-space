@@ -56,7 +56,6 @@ $(function(){
         data: { id: last_message_id }
       })
 
-      console.log(data)
       .done(function(data){
         var insertHTML = '';
         data.forEach(function(message){
