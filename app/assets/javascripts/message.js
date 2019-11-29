@@ -1,46 +1,39 @@
-$(function(){ 
+$(function(){
+  $('#new_message').on('submit', function(e){
+    e.preventDefault()
+    console.log('イベント発火');
+  })  
   function buildHTML(message){
-    image = ( message.image ) ? `<img class= "lower-message__image" src=${message.image} >` : "";
-    let html = 
-      `<div class="message" data-message-id=${message.id}>
-        <div class="upper-message">
-          <div class="upper-message__user-name">
-            ${message.user_name}
-          </div>
-          <div class="upper-message__date">
-            ${message.date}
-          </div>
-        </div>
-        <div class="lower-message">
-          <p class="lower-message__content">
-            ${message.content}
-          </p>
-        </div>
-        ${image}
-      </div> `
-    return html;
+    if (message.image) {
+      var html = 
+    } else {
+      var html = <div class="message">
+      <div class="upper-message">
+      <div class="upper-message__user-name">
+      0@0
+      </div>
+      <div class="upper-message__date">
+      2019/11/29 12:08
+      </div>
+      </div>
+      <div class="lower-message">
+      <p class="lower-message__content">
+      にゃーーー
+      </p>
+      
+      </div>
+      </div>
+    }
+    return html
   }
-$('#new_message').on('submit', function(e){
- e.preventDefault();
- let formData = new FormData(this);
- let url = $(this).attr('action')
- $.ajax({
-   url: url,
-   type: "POST",
-   data: formData,
-   dataType: 'json',
-   processData: false,
-   contentType: false
- })
-  .done(function(data){
-    let html = buildHTML(data);
-    $('.messages').append(html);
-    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
-    $('form')[0].reset();
+
+
+
+  $.ajax({
+    url: 
+    type:
+    dataType: json
+    processData: false
+    contentType: false
   })
-   .fail(function(){
-     alert('error');
-   });
-   return false;
- });
-});
+})
