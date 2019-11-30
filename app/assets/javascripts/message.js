@@ -1,8 +1,4 @@
 $(function(){
-  $('#new_message').on('submit', function(e){
-    e.preventDefault()
-    console.log('イベント発火');
-  })  
   function buildHTML(message){
     if (message.image) {
       var html = 
@@ -28,12 +24,15 @@ $(function(){
   }
 
 
-
-  $.ajax({
-    url: 
-    type:
-    dataType: json
-    processData: false
-    contentType: false
-  })
+    $('#new_message').on('submit', function(e){
+      e.preventDefault()
+      console.log('イベント発火');
+    $.ajax({
+      url: 
+      type:
+      dataType: json
+      processData: false
+      contentType: false
+    })
+  })  
 })
