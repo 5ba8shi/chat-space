@@ -19,4 +19,4 @@
 public/uploads/*
 
 /github subscribe 5ba8shi/chat-space
-# config/secrets.yml
+config/secrets.yml
