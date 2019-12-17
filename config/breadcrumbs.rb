@@ -1,5 +1,10 @@
 crumb :root do
-  link "Home", root_path
+  link "マイグループリスト", root_path
+end
+
+# マイページ
+crumb :mypage do
+  link "おはよう", mypage_users_path
 end
 
 # crumb :projects do
