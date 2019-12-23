@@ -4,7 +4,7 @@ end
 
 # マイページ
 crumb :mypage do
-  link "おはよう", mypage_users_path
+  link "おはよう", group_messages_path
 end
 
 # crumb :projects do
