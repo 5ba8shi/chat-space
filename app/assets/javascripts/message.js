@@ -39,7 +39,7 @@ $(function(){
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');   
       $('form')[0].reset();
     })
-    
+
     .fail(function(){
       alert('error');
     });
@@ -47,9 +47,9 @@ $(function(){
   });
 
 
-  var reloadMessages = function(){
+  let reloadMessages = function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      var last_message_id = $('.message:last').data("message-id"); 
+      let last_message_id = $('.message:last').data("message-id"); 
 
       $.ajax({
         url: "api/messages",
@@ -59,7 +59,7 @@ $(function(){
       })
 
       .done(function(data){
-        var insertHTML = '';
+        let insertHTML = '';
         data.forEach(function(message){
           if (last_message_id < message.id){
           insertHTML = buildHTML(message);         
